@@ -1,6 +1,2 @@
 # Alabama
-gaming
-# Fucked
-gaming
-# gaming
-  hello
+jakob og kristians alabama verden
