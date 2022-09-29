@@ -1,2 +1,2 @@
 # Alabama
-jakob og kristians alabama verden
+jakob og kristians alabama verden er mega sej
