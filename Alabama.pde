@@ -5,7 +5,6 @@ spillers = new spiller();
   
 }
 void draw(){
-  background(255,255,200);
   spillers.update();
 }
 
