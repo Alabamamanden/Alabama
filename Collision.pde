@@ -1,8 +1,9 @@
 class collision {
   collision() {
   }
+    PImage mette;
     int afstand;
-    int point; 
+    int point=0; 
     int minkx;
     int minky;
     int rminkx;
@@ -19,62 +20,55 @@ class collision {
 
 
 void setup(){
+  mette = loadImage("Mettemole.png");
   rminkx = int(random(1,4));
   rminky = int(random(1,4));
   dia = 70;
   diame = 5;
   point = 0;
 }
-void newCircle(){
 
-}
+
 
 void show(){
+   fill((300),(100),(255));
+   textSize(20);
+   text("point "+point+"" ,710,590);
   if(rminkx==1){
     minkx=f1;
-    println(rminkx);
-    print("noob");
   }
   if(rminkx==2){
     minkx=f2;
-    println(rminkx);
-    print("noob");
   }
   if(rminkx==3){
     minkx=f3;
-    println(rminkx);
-    print("noob");
   }
   if(rminky==1){
     minky=g1;
-    print("noob");
   }
   if(rminky==2){
     minky=g2;
-    print("noob");
   }
   if(rminky==3){
     minky=g3;
-    print("noob");
   }
- //https://editor.p5js.org/elin7/sketches/E6UySb5jI
-  if(rminky==1);{
-    //minky=g1;
-    println("noob");
+  if(random(point*point+300)<point && point>10){
+    rminkx=int(random(0,4));
+    rminky=int(random(0,4));
   }
-  //println(rminky);
-  //println(rminkx);
-  circle(minkx,minky,dia);
+  image(mette, minkx, minky,dia, dia);
+
 }
 
 
 void mousePressed(){
-  print("gaming");
+  //print("gaming");
   float d = dist(mouseX, mouseY, minkx, minky);
     if (d < dia) {
-      println("clickedgaming");
+      point=point+1;
+      println(point);
       rminkx = int(random(1,4));
-      rminky = int(random(1,4));
-    }
-
+      rminky = int(random(1,4)); 
     }}
+
+}
