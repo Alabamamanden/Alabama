@@ -4,14 +4,14 @@ class mole{
   }
     
 void setup() {
-  img = loadImage("Mettemole.png");
+ // img = loadImage("Mettemole.png");
   
   
   }
  
 
 void draw() {
-  image(img, 200, 200, 320, 320);
+//  image(img, 200, 200, 320, 320);
   }
   
 }  
