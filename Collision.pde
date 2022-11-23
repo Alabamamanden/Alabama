@@ -1,6 +1,8 @@
 class collision {
   collision() {
   }
+  
+  
     PImage mette;
     int afstand;
     int point=0; 
@@ -10,20 +12,21 @@ class collision {
     int rminky;
     int diame;
     int dia =70;
-    int f1 = 200;
-    int f2 = 400;
-    int f3 = 600;
+    int f1 = 150;
+    int f2 = 350;
+    int f3 = 550;
 
-    int g1 = 170;
-    int g2 = 270;
-    int g3 = 370;
-
+    int g1 = 30;
+    int g2 = 230;
+    int g3 = 430;
+   
+    
 
 void setup(){
   mette = loadImage("Mettemole.png");
   rminkx = int(random(1,4));
   rminky = int(random(1,4));
-  dia = 70;
+  dia = 100;
   diame = 5;
   point = 0;
 }
@@ -56,8 +59,17 @@ void show(){
     rminkx=int(random(0,4));
     rminky=int(random(0,4));
   }
-  image(mette, minkx, minky,dia, dia);
-
+ fill(139,69,19);
+rect(f1,g1,dia,dia);
+rect(f1,g2,dia,dia);
+rect(f1,g3,dia,dia);
+rect(f2,g1,dia,dia);
+rect(f2,g2,dia,dia);
+rect(f2,g3,dia,dia);
+rect(f3,g1,dia,dia);
+rect(f3,g2,dia,dia);
+rect(f3,g3,dia,dia);
+ image(mette, minkx, minky,dia, dia);
 }
 
 
@@ -66,9 +78,14 @@ void mousePressed(){
   float d = dist(mouseX, mouseY, minkx, minky);
     if (d < dia) {
       point=point+1;
+      
       println(point);
       rminkx = int(random(1,4));
       rminky = int(random(1,4)); 
-    }}
+    }
+    if(point==point+1){
+      
+    }
+  }
 
 }
